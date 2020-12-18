@@ -1,0 +1,13 @@
+{
+  "appId": "edwards.brent.vue.memories",
+  "appName": "Vue Memories",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
