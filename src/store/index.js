@@ -7,7 +7,7 @@ const store = createStore({
             {
                id: "m1",
                image:
-                  "https://lh3.googleusercontent.com/proxy/4Q6XB-SYkq_WnT_hYt6JDWr6-YPb06L1c-nNBnxa4d0H8wh5tQ0pQc2j0RKoba5EuxZYH23FEdzZzTnaJUGEHEdQnTQkm1hTnJBeEQpMAyg-R7h3UPvuaFCBVO8Q-vE_wm2JuuBr25gbJ9EdxjxEweobpNZWU2ATAw",
+                  "https://upload.wikimedia.org/wikipedia/commons/c/c5/Granite_Peak_Montana_2.jpg",
                title: "A trip into the mountains",
                description: "It was a really nice trip!",
             },
@@ -36,6 +36,23 @@ const store = createStore({
          return (memoryId) => {
             return state.memories.find((memory) => memory.id === memoryId);
          };
+      },
+   },
+   mutations: {
+      addMemory(state, memoryData) {
+         const newMemory = {
+            id: new Date().toISOString(),
+            title: memoryData.title,
+            image: memoryData.image,
+            description: memoryData.description,
+         };
+
+         state.memories.unshift(newMemory);
+      },
+   },
+   actions: {
+      addMemory(context, memoryData) {
+         context.commit("addMemory", memoryData);
       },
    },
 });

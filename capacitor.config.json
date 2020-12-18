@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "vue-first-app",
+  "appId": "edwards.brent.vue.memories",
+  "appName": "Vue Memories",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist",
